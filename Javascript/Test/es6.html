@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        haha
+        <script>
+            const a = 10;
+            // a = 20; // 상수라 에러남
+
+            let b = 3;
+            b = 1;
+            if (true) {
+                let b = 2; // let 은 해당 {} 블럭에서만 실행됨
+                console.log(b);
+            }
+            console.log(b);
+
+            var c = 10;
+            b = 20;
+            if (true) {
+                var c = 2;
+                console.log(c);
+            }
+            console.log(c);
+
+            const arr = "hello";
+            console.log(`arr은 ${arr}`);
+
+            // 에로우 펑션
+            // this를 바인딩하는 장점이 있다.
+            var fun1 = function (a, b) {
+                return a + b;
+            };
+
+            var func2 = (a, b) => a + b;
+
+            const [d, e, f] = [1, 2, 3];
+            console.log(d, e, f);
+
+            // 스프레드 연산자
+            // 괄호를 없앤다고 보면됨
+            const arr1 = [1, 2];
+            const arr2 = [3, 4, 5];
+            const arr3 = [...arr1, ...arr2];
+            console.log(arr3);
+
+            function abc(a, ...b) {
+                console.log(arguments[0]); // arguments 인자를 하나하나 출력 가능
+                console.log(b[0]);
+            }
+            abc("nodejs", "hello", 1);
+        </script>
+    </body>
+</html>
